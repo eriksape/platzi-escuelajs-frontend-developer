@@ -1,0 +1,196 @@
+//Variable
+$blanco: white;
+
+body {
+    margin: 0px;
+    font-family: 'Muli', sans-serif;
+}
+
+//Herencia
+.flex{
+    display: flex;
+}
+
+//mixin
+@mixin space-between{
+    justify-content: space-between;
+}
+
+/* Header */
+.header{
+    background-color: #21c08b;
+    color: white;
+    width: 100%; 
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    top: 0px;
+    align-items: center;
+}
+
+.header__img {
+    width: 200px;
+    margin-left: 10px;
+}
+
+
+/* Login */
+.login{
+    background: linear-gradient(#21c08b, #ab88ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    min-height: calc(100vh - 200px);
+}
+
+.login__container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    border-radius: 40px;
+    color: white;
+    padding: 60px 68px 40px;
+    min-height: 650px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .5);
+}
+
+.login__containter--form { 
+    display: flex;
+    flex-direction: column;
+}
+
+.login__containter--form label { 
+    font-size: 14px;
+}
+
+.login__containter--remember-me {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.login__containter--remember-me a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.login__containter--remember-me a:hover {
+    text-decoration: underline;
+}
+
+.login__container--social-media > div {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.login__container--social-media > div > img {
+    width:  30px;
+    margin-right: 10px;
+}
+
+.login__container--register {
+    font-size: 16px;
+    // a {
+    //     font-size: 16px;
+    // color: $blanco;
+    // font-weight: bold;
+    // text-decoration: none
+    // }
+}
+
+.login__container--register a {
+    font-size: 16px;
+    color: $blanco;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login__container--register a:hover {
+    text-decoration: underline;
+}
+
+.input {
+    background-color: transparent;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 2px solid #fff;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none;
+    height: 50px;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+
+.button:hover {
+    border: 1px solid #fff;
+
+}
+
+@media only screen and (max-width: 600px){
+    .login__container{
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        padding: 0px;
+        box-shadow: none;  
+    }
+}
+
+
+/* footer */
+.footer{
+    background-color: #ab88ff;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footer a{
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Muli', sans-serif;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px){
+    .footer{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
