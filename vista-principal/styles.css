@@ -236,8 +236,22 @@ body {
   color: #fff;
   font-size: 120px;
   margin: 0px;
+  animation-name: error-code-animate;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
 }
 
+@keyframes error-code-animate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .error p {
   color: #fff;
   font-size: 16px;
